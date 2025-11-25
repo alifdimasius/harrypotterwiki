@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  ContentViewModel.swift
 //  harrypotterwiki
 //
 //  Created by Alif Dimasius on 25/11/25.
@@ -11,34 +11,27 @@ import SwiftUI
 final class ContentViewModel {
     enum Tab: String, CaseIterable, Identifiable {
         case recommendations
-        case book
-        case character
-        case movies
-        case potions
-        case spells
+        case wizardingWorld
+        case stories
         
         var id: String { rawValue }
         
         var systemImage: String {
             switch self {
             case .recommendations: return "safari"
-            case .book: return "book"
-            case .character: return "person.3"
-            case .movies: return "cinema"
-            case .potions: return "flask"
-            case .spells: return "sparkles"
+            case .wizardingWorld: return "wand.and.stars"
+            case .stories: return "books.vertical"
             }
         }
         
         var title: String {
             switch self {
-            case .recommendations: return "Recommendations"
-            case .book: return "Books"
-            case .character: return "Characters"
-            case .movies: return "Movies"
-            case .potions: return "Potions"
-            case .spells: return "Spells"
+            case .recommendations: return "For You"
+            case .wizardingWorld: return "Wizarding World"
+            case .stories: return "Stories"
             }
         }
     }
+    
+    var selectedTab: Tab = .recommendations
 }
