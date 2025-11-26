@@ -11,6 +11,8 @@ enum PotterResource: String {
     case characters
     case books
     case potions
+    case movies
+    case spells
 }
 
 protocol PotterAPIServicing {
